@@ -1,0 +1,169 @@
+#experienceWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+#experienceWrapper .start-button {
+  position: absolute;
+  padding: 20px 0;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#experienceWrapper .start-button p {
+  position: relative;
+  font-size: 30px;
+  color: white;
+  transition: color 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#experienceWrapper .start-button.visible {
+  pointer-events: all;
+  z-index: 1;
+  opacity: 1;
+}
+#experienceWrapper .start-button:hover p {
+  color: #8a8a8a;
+}
+#experienceWrapper .experience {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 2.5s ease-in-out;
+}
+#experienceWrapper #cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: auto;
+  z-index: 99;
+  pointer-events: none;
+  user-select: none;
+  user-focus: none;
+  transform: translate(-5vh, -5vw);
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#experienceWrapper #cursor.visible {
+  opacity: 1;
+}
+@media only screen and (max-width: 576px) {
+  #experienceWrapper #cursor {
+    display: none;
+  }
+}
+#experienceWrapper .rubik-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#experienceWrapper .glowing-circle {
+  position: absolute;
+  top: 0;
+  left: 33%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translateY(10%);
+  animation: glow-rubikub 2s infinite;
+}
+#experienceWrapper .rubik-cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#experienceWrapper .rubik-cube:hover {
+  transform: scale(1.3) perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+#experienceWrapper .rubik-text {
+  color: white;
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#errorWrapper {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+#errorWrapper h1 {
+  position: relative;
+  font-size: 60px;
+  color: black;
+}
+#errorWrapper a {
+  position: relative;
+  margin-top: 50px;
+  font-size: 20px;
+  color: black;
+}
+
+@font-face {
+  font-family: "HomemadeApple";
+  src: url("/src/assets/fonts/HomemadeApple-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SometypeMono";
+  src: url("/src/assets/fonts/SometypeMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+@media screen and (max-width: 992px) {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+html, body {
+  background: black;
+  overscroll-behavior: none;
+}
+
+.tp-dfwv {
+  width: 280px !important;
+}
+
+a {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+/*# sourceMappingURL=main.css.map */
